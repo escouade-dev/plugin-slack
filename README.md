@@ -2,7 +2,7 @@
 
 Tickets to test and agents waiting, in each project’s Slack channel. A TypeScript program that calls `chat.postMessage`; the bot’s token is kept in the keychain.
 
-At install, Escouade asks for a bot token (`xoxb-…`, scope `chat:write`). Each project posts to the channel `channels.json` names for it, or to `escouade-<project>`. Escouade runs `dist/plugin.mjs` with Node.
+At install, Escouade asks for a bot token (`xoxb-…`, scope `chat:write`). Each project posts to the channel `channels.json` names for it, or to `escouade-<project>`. Escouade runs `dist/plugin.mjs` with Node. A ticket’s title is escaped (`&`, `<`, `>`) as Slack asks: a `<!channel>` from a public issue shows without notifying anyone. Installed from the store, `channels.json` is the one of this repository (its fingerprint is checked): to choose your channels, fork the plugin; otherwise each project posts to `escouade-<project>`.
 
 > Les tickets à tester et les agents qui attendent, dans le salon Slack de chaque projet. Un programme TypeScript qui appelle `chat.postMessage` ; le jeton du bot est gardé au trousseau.
 
